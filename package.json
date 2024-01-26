@@ -1,0 +1,19 @@
+{
+  "name": "api_modelserving",
+  "version": "1.0.0",
+  "description": "API Development for Model Serving",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Erundule/Api_ModelServing.git"
+  },
+  "author": "Camila C.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Erundule/Api_ModelServing/issues"
+  },
+  "homepage": "https://github.com/Erundule/Api_ModelServing#readme"
+}
