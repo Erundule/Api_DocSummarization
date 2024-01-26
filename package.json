@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Erundule/Api_ModelServing/issues"
   },
-  "homepage": "https://github.com/Erundule/Api_ModelServing#readme"
+  "homepage": "https://github.com/Erundule/Api_ModelServing#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
