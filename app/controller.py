@@ -1,5 +1,3 @@
-# app/controller.py
-
 import os
 import PyPDF2
 from flask import request, jsonify, Flask
