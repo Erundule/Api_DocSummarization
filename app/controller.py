@@ -31,12 +31,14 @@ def extract_text_from_pdf(pdf_file):
 
 #Função que processa um arquivo enviado pelo usuário, caso seja um arquivo PDF, 
 #extrai o texto e o resume, caso seja um arquivo de texto, apenas resume o texto
-def process_uploaded_file(content, is_pdf=False):
+def process_uploaded_file(file_path, is_pdf=False):
     try:
         if is_pdf:
-            text = extract_text_from_pdf(content)
+            text = extract_text_from_pdf(file_path)
         else:
-            text = content.decode('utf-8')
+            # Se for um arquivo de texto, leia o conteúdo diretamente do arquivo
+            with open(file_path, 'r', encoding='utf-8') as file:
+                text = file.read()
 
         if not text.strip():
             return "File is empty."
@@ -45,6 +47,7 @@ def process_uploaded_file(content, is_pdf=False):
 
     except Exception as e:
         return f"Error reading file: {str(e)}"
+
 
 #Função que processa a requisição de resumo de um arquivo enviado pelo usuário
 def api_summarize():
