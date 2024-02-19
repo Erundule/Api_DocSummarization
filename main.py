@@ -1,10 +1,10 @@
 import os
-from app.controller import api_summarize, index, app
+from api.controller import api_summarize, index, app
 from config.config import Config
 from flask import request, jsonify
 
 #port config
-port = int(os.environ.get('PORT', 5000))
+port = int(os.environ.get('PORT', 8080))
 
 #authorization
 app.config.from_object(Config)
@@ -26,6 +26,5 @@ app.add_url_rule('/', 'index', index, methods=['GET'])
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
-    app.run(host='127.0.0.1', port=port)
+    app.run(host='0.0.0.0', port=5000)
 

@@ -1,8 +1,8 @@
 import os
 import PyPDF2
 from flask import request, jsonify, Flask
-from app.model import text_rank_summarize
-from app.view import render_upload_form
+from api.model import text_rank_summarize
+from api.view import render_upload_form
 
 ALLOWED_EXTENSIONS = {'txt', 'pdf'}
 
